@@ -34,21 +34,18 @@ Tux는 멀리서 Nolok의 요새를 봅니다. 그리고 Tux는 사랑하는 Pen
 메뉴에서 응용 프로그램을 열 수 있습니다(컨트롤 아이콘 클릭).
 그러면 MacOS는 다음번에 당신의 설정을 기억할 것 입니다. 
 
-## Documentation
+## 문서
 
-Important documentation for SuperTux is contained in multiple files.
-Please see them:
+SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니다.
+다음을 참조하세요:
 
-* `INSTALL.md` - Requirements, compiling and installing.
-* `README.md` - This file
-* `NEWS.md` - Changes since the previous versions of SuperTux.
-* `LICENSE.txt` - The GNU General Public License, under whose terms SuperTux is
-licensed. (Most of the data subdirectory is also licensed under
-CC-by-SA)
-* `docs/levelguidelines.txt` - Very useful information for those that want to
-design levels for SuperTux.
-* `data/credits.stxt` - Credits for people that contributed to the creation of
-SuperTux. (You can view these in the game menu as well.)
+* `INSTALL.md` - 요구 사항, 컴파일 및 설치 방법
+* `README.md` - 현재 파일
+* `NEWS.md` - 이전 버전의 SuperTax가 변경내용 포함 문서
+* `LICENSE.txt` - GNU의 라이센스 하의 SuperTux의 라이센스 문서
+(대부분의 데이터 하위 디렉토리는 CC에서 SA 입니다.)
+* `docs/levelguidelines.txt` - SuperTax의 레벨들을 재디자인 하려는 분들께 유용한 정보를 포함한 문서
+* `data/credits.stxt` - SuperTax를 제작하는 것에 기여한 분들을 위한 크레딧 데이터(게임 메뉴에서 또한 볼 수 있습니다.)
 
 
 ## Playing the game
