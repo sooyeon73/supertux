@@ -61,7 +61,7 @@ SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니�
 
 ## Community
 
-In case you need help, feel free to reach out using the following means:
+도움이 필요한 경우 다음 방법들을 통하여 언제든지 문의하세요.
 
 * **IRC:** [#supertux](ircs://chat.freenode.net/#supertux) on
   [freenode](https://freenode.net) hosts most of the discussions between
