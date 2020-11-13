@@ -22,19 +22,17 @@ Tux가 깨어났을 때, 그는 Penny가 사라진 것을 알았습니다. Tux�
 >
 >-Nolok-
 
-Tux는 멀리서 Nolok의 요새를 본다. 사랑하는 Penny를 구출하기위해 그는 그의 여정을 시작한다. 
+Tux는 멀리서 Nolok의 요새를 봅니다. 그리고 Tux는 사랑하는 Penny를 구출하기위해 그의 여정을 시작합니다. 
 
-##installation
+## 설치방법
 
-For major platforms, stable releases are built and available for download from
-[supertux.org](https://www.supertux.org/download.html) or alternatively directly
-from [GitHub](https://github.com/SuperTux/supertux/releases). You should be able
-to install these using default tools provided by your platform. On macOS, when
-Gatekeeper is enabled (default) it will refuse to open SuperTux. This is due to
-the lack of a signature on the application. If you wish to open SuperTux anyway
-without disabling the Gatekeeper feature entirely, you can open the application
-from the context menu (control click on the icon). macOS will then remember your
-choice the next time.
+주요 플랫폼의 경우, 안정적인 상태에서 다음의 경로를 통해 다운로드가 가능합니다. 
+[supertux.org](https://www.supertux.org/download.html) 또는 Github에서 바로 다운로드 가능합니다.
+[GitHub](https://github.com/SuperTux/supertux/releases). 당신은 반드시 플랫폼에서 제공하는 기본 도구를 사용하여 설치해야합니다. MacOS에선, 게이트키퍼가 활성화되어 SuperTux가 열리는 것을 거부할 수도 있습니다.
+이점은 응용프로그램에 서명(승인)이 없기 때문입니다.
+게이트기퍼 기능을 완전히 활성화 시키지 않고 SuperTax를 열기 원한다면,
+메뉴에서 응용 프로그램을 열 수 있습니다(컨트롤 아이콘 클릭).
+MacOS는 다음번에도 당신의 설정을 기억할 것 입니다. 
 
 ## Documentation
 
