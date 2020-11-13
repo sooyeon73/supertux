@@ -63,32 +63,22 @@ SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니�
 
 도움이 필요한 경우 다음 방법들을 통하여 언제든지 문의하세요.
 
-* **IRC:** [#supertux](ircs://chat.freenode.net/#supertux) on
-  [freenode](https://freenode.net) hosts most of the discussions between
-  developers. Also, real-time support can be provided here. If you don't know
-  how to use an IRC client, you access the channel using a web-based
-  [client](https://kiwiirc.com/client/chat.freenode.net:+6697/?nick=Guest?#supertux).
-  Please stay around after asking questions, otherwise you will be disconnected
-  and might miss potential answers.
+* **IRC:**  [freenode](https://freenode.net)에서[#supertux](ircs://chat.freenode.net/#supertux) 개발자들 간  의 대부분의 논의가 이루어집니다. 또한, 여기에서 실시간 지원을 제공할 수 있습니다.
+IRC 사용방법을 모른다면, [client](https://kiwiirc.com/client/chat.freenode.net:+6697/?nick=Guest?#supertux)을 통하여 접근가능 합니다. 질문 후에는 답변들을 놓칠 수도 있으니 채널에 잠시 머물러 주세요. 
 * **Matrix:** [#supertux:matrix.org](https://matrix.to/#/#supertux:matrix.org)
-  is bridged to our IRC room.
-* **[Forum](https://forum.freegamedev.net/viewforum.php?f=66):** The SuperTux
-  community is very active on the forum, the discussion ranges from feature
-  proposals to support questions. In particular, most community-contributed
-  add-ons are published there first, so this is worth checking.
-* **Mailing Lists:** The
+  는 IRC 룸을 연결시켜줍니다.
+* **[Forum](https://forum.freegamedev.net/viewforum.php?f=66):** SuperTux
+  커뮤니티는 포럼에서 매우 활동적이며 논의는 기능 제안에서 지원 질문에 이르기까지 다양합니다.
+  특히, 대부분의 커뮤니티 기여의 add-on이 가장 먼저 게시되므로 확인할 가치가 있습니다.
+* **Mailing Lists:**
   [supertux-devel](http://lists.lethargik.org/listinfo.cgi/supertux-devel-lethargik.org)
-  mailing list is intended for development purposes. However, it is not very
-  active at the moment.
-* **Social Media:** Mostly on [Twitter](https://twitter.com/supertux_team) at
-  the moment.
-* **Discord:** Also, you can join our Discord server (https://discord.com/invite/AcvtHWz) to get in touch with us.
+  메일링 리스트는 개발 목적을 위한 것입니다. 그러나 현재로서는 매우 활동적이진 않습니다.
+* **Social Media:** 대부분은 현재[Twitter](https://twitter.com/supertux_team)에 있습니다.
+* **Discord:** 또한 Discord 서버에 가입하여 (https://discord.com/invite/AcvtHWz) 연락할 수 있습니다.
 
-## Development status
+## 개발 상태
 
-As of now, with the release of SuperTux 0.6.2 (May 2020), the Forest World is almost
-finished, since the ghost forest section has been included. However, some levels, especially
-the Ghostree Level, are considered to be placeholders, because for the next version (0.7.0) a
-great overhaul is planned with new features like reworked boss fights, graphics, and worlds.
-If you have some Constructive Feedback, Contributions or ideas to share, don't hestitate
-to contact us with one of the possibilities given above.
+현재 SuperTux 0.6.2 (2020 년 5 월)가 출시되면서 Forest World는 거의
+유령 숲 섹션이 포함되어 개발 완료되었습니다. 그러나, 특히 Ghostree 레벨에서는 아직까지 개발단계라고 여겨집니다.
+왜냐하면, 다음 버전인 0.7.0 버전에서 보스와의 전투, 그래픽 및 새로운 세계와 같은 새로운 기능으로 대대적인 수정이 계획되어 있습니다. 
+게임의 구조적인 피드백, 기여 또는 공유할 아이디어가 있다면, 주저하지말고 위에 제시된 커뮤니티 방식들을 통하여 당사에 문의해주세요.
