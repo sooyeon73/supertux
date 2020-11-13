@@ -48,22 +48,16 @@ SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니�
 * `data/credits.stxt` - SuperTax를 제작하는 것에 기여한 분들을 위한 크레딧 데이터(게임 메뉴에서 또한 볼 수 있습니다.)
 
 
-## Playing the game
+## 게임방법
 
-Both keyboards and joysticks/gamepads are supported. You can change
-the controls via the Options menu. Basically, the only keys you will
-need to use in-game are to do the following actions: jump, duck,
-right, left, action and 'P' to pause/unpause the game. There isn't much
-to tell about the first few, but the "action" key allows you to pick
-up objects and use any powerup you got. For instance, with the fire
-flower, you can shoot fireballs, or with the ice flower fire ice pellets.
-
-Other useful keys include the Esc key, which is used to go to the menu
-or to go up a level in the menu. The menu can be navigated using the
-arrow keys or the mouse.
-
-In the worldmap, the arrow keys are used to navigate and Enter to
-enter the current level.
+키보드와 조이스틱/게임패드 모두 지원됩니다. 옵션의 메뉴를 통해 컨트롤 방식을 변경할 수 있습니다.
+기본적으로, 게임안에서 사용해야 할 키들은 다음과 같습니다: 점프, duck,
+오른쪽, 왼쪽으로의 액션 키가 있으며, 'P'는 게임을 일시중시/일시중지 해제 합니다.
+"action" 키를 사용하면 물건을 들어올리고 파워를 사용할 수 있습니다.
+예시로, 당신은 "fire flower" 또는 "ice flower"아이템을 통해 불꽃, 얼음알갱이를 쏠 수 있습니다.
+다른유용한키로는 "Esc"키를 사용하여 메뉴로 이동할 수 있으며, 메뉴에서 한 단계 위로 이동할 수 있습니다. 
+메뉴는 화살표 키 또는 마우스를 사용하여 탐색할 수 있습니다.
+세계지도에서 화살표 키를 사용하여 현재 레벨을 입력하세요.
 
 ## Community
 
