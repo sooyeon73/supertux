@@ -5,35 +5,26 @@
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/k9jaduxvftlhgmhp/branch/master?svg=true)](https://ci.appveyor.com/project/supertux/supertux-o8t59/branch/master)
 [![Github All Releases](https://img.shields.io/github/downloads/supertux/supertux/total.svg?maxAge=2592000)](https://github.com/SuperTux/supertux)
 
-SuperTux is a jump'n'run game with strong inspiration from the
-Super Mario Bros. games for the various Nintendo platforms.
-
-Run and jump through multiple worlds, fighting off enemies by jumping
-on them, bumping them from below or tossing objects at them, grabbing
-power-ups and other stuff on the way.
-
+SuperTux는 슈퍼마리오로부터 강한 영감을 받아 만들어진 점프하고 달리는 게임입니다.
+여러 세계를 달리고 점프하며 적들과 싸우고, 아래쪽에서 적들에게 물건들을 던져 맞히고, 파워와 아이템을 획득하세요.
 ![Screenshot](https://www.supertux.org/images/0_6_0/0_6_0_3.png)
 
 
-## Story: Penny gets captured!
+## 줄거리: Penny가 붙잡혔다!
 
-Tux and Penny were out having a nice picnic on the ice fields of
-Antarctica. Suddenly, a creature jumped from behind an ice bush, there
-was a flash, and Tux fell asleep!
+Tux와 Penny는 남극의 빙하위에서 멋진 피크닉을 하고 있었습니다.
+그런데 갑자기! 한 괴생물체가 얼음 덤불 뒤에서 뛰어내려 빠르게 지나갔고, Tux는 잠에 빠져들었습니다!
 
-When Tux wakes up, he finds that Penny is missing. Where she lay
-before now lies a letter:
->Tux, my arch enemy! I have captured your beautiful Penny and have
->taken her to my fortress. The path to my fortress is littered with my
->minions. Give up on the thought of trying to reclaim her, you haven't
->got a chance!
+Tux가 깨어났을 때, 그는 Penny가 사라진 것을 알았습니다. Tux가 일어나기 전, 누군가 편지 한 통을 두고 갔습니다.
+>나의 적 Tux! 너의 아름다운 그녀 Penny를 나의 요새로 데려간다.
+> 요새로 오는 길은 내 부하들로 가득 차있어.
+>그녀를 되찾으려는 생각은 포기해. 너는 기회가 없어!
 >
->-Nolok
+>-Nolok-
 
-Tux looks and sees Nolok's fortress in the distance. Determined to
-save his beloved Penny, he begins his journey.
+Tux는 멀리서 Nolok의 요새를 본다. 사랑하는 Penny를 구출하기위해 그는 그의 여정을 시작한다. 
 
-## Installation
+##installation
 
 For major platforms, stable releases are built and available for download from
 [supertux.org](https://www.supertux.org/download.html) or alternatively directly
