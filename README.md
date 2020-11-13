@@ -26,13 +26,13 @@ Tux는 멀리서 Nolok의 요새를 봅니다. 그리고 Tux는 사랑하는 Pen
 
 ## 설치방법
 
-주요 플랫폼의 경우, 안정적인 상태에서 다음의 경로를 통해 다운로드가 가능합니다. 
-[supertux.org](https://www.supertux.org/download.html) 또는 Github에서 바로 다운로드 가능합니다.
-[GitHub](https://github.com/SuperTux/supertux/releases). 당신은 반드시 플랫폼에서 제공하는 기본 도구를 사용하여 설치해야합니다. MacOS에선, 게이트키퍼가 활성화되어 SuperTux가 열리는 것을 거부할 수도 있습니다.
-이점은 응용프로그램에 서명(승인)이 없기 때문입니다.
+주요 플랫폼의 경우, 안정적인 상태에서 [supertux.org](https://www.supertux.org/download.html)를 통해 다운로드가 가능합니다. 
+또는 [GitHub](https://github.com/SuperTux/supertux/releases)에서 바로 다운로드 가능합니다.
+당신은 반드시 플랫폼에서 제공하는 기본 도구를 사용하여 설치해야 합니다. MacOS에선, 게이트키퍼가 활성화되어 SuperTux가 열리지 않을 수도 있습니다.
+이점은 응용프로그램의 승인이 없기 때문입니다.
 게이트기퍼 기능을 완전히 활성화 시키지 않고 SuperTax를 열기 원한다면,
 메뉴에서 응용 프로그램을 열 수 있습니다(컨트롤 아이콘 클릭).
-MacOS는 다음번에도 당신의 설정을 기억할 것 입니다. 
+그러면 MacOS는 다음번에 당신의 설정을 기억할 것 입니다. 
 
 ## Documentation
 
