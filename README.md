@@ -30,7 +30,7 @@ Tux는 멀리서 Nolok의 요새를 봅니다. 그리고 Tux는 사랑하는 Pen
 또는 [GitHub](https://github.com/SuperTux/supertux/releases)에서 바로 다운로드 가능합니다.
 당신은 반드시 플랫폼에서 제공하는 기본 도구를 사용하여 설치해야 합니다. MacOS에선, 게이트키퍼가 활성화되어 SuperTux가 열리지 않을 수도 있습니다.
 이점은 응용프로그램의 승인이 없기 때문입니다.
-게이트기퍼 기능을 완전히 활성화 시키지 않고 SuperTax를 열기 원한다면,
+게이트기퍼 기능을 완전히 활성화 시키지 않고 SuperTax를 열기를 원한다면,
 메뉴에서 응용 프로그램을 열 수 있습니다(컨트롤 아이콘 클릭).
 그러면 MacOS는 다음번에 당신의 설정을 기억할 것 입니다. 
 
@@ -55,7 +55,7 @@ SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니�
 오른쪽, 왼쪽으로의 액션 키가 있으며, 'P'는 게임을 일시중시/일시중지 해제 합니다.
 "action" 키를 사용하면 물건을 들어올리고 파워를 사용할 수 있습니다.
 예시로, 당신은 "fire flower" 또는 "ice flower"아이템을 통해 불꽃, 얼음알갱이를 쏠 수 있습니다.
-다른유용한키로는 "Esc"키를 사용하여 메뉴로 이동할 수 있으며, 메뉴에서 한 단계 위로 이동할 수 있습니다. 
+다른 유용한키로는 "Esc"키를 사용하여 메뉴로 이동할 수 있으며, 메뉴에서 한 단계 위로 이동할 수 있습니다. 
 메뉴는 화살표 키 또는 마우스를 사용하여 탐색할 수 있습니다.
 세계지도에서 화살표 키를 사용하여 현재 레벨을 입력하세요.
 
@@ -63,12 +63,12 @@ SuperTax에 대한 중요한 문서는 여러 파일에 포함되어 있습니�
 
 도움이 필요한 경우 다음 방법들을 통하여 언제든지 문의하세요.
 
-* **IRC:**  [freenode](https://freenode.net)에서[#supertux](ircs://chat.freenode.net/#supertux) 개발자들 간  의 대부분의 논의가 이루어집니다. 또한, 여기에서 실시간 지원을 제공할 수 있습니다.
+* **IRC:**  [freenode](https://freenode.net)에서[#supertux](ircs://chat.freenode.net/#supertux) 개발자들 간의 대부분의 논의가 이루어집니다. 또한, 여기에서 실시간 지원을 제공할 수 있습니다.
 IRC 사용방법을 모른다면, [client](https://kiwiirc.com/client/chat.freenode.net:+6697/?nick=Guest?#supertux)을 통하여 접근가능 합니다. 질문 후에는 답변들을 놓칠 수도 있으니 채널에 잠시 머물러 주세요. 
 * **Matrix:** [#supertux:matrix.org](https://matrix.to/#/#supertux:matrix.org)
   는 IRC 룸을 연결시켜줍니다.
 * **[Forum](https://forum.freegamedev.net/viewforum.php?f=66):** SuperTux
-  커뮤니티는 포럼에서 매우 활동적이며 논의는 기능 제안에서 지원 질문에 이르기까지 다양합니다.
+  커뮤니티는 포럼에서 매우 활동적이며 논의사항은 기능 제안에서 지원 질문에 이르기까지 다양합니다.
   특히, 대부분의 커뮤니티 기여의 add-on이 가장 먼저 게시되므로 확인할 가치가 있습니다.
 * **Mailing Lists:**
   [supertux-devel](http://lists.lethargik.org/listinfo.cgi/supertux-devel-lethargik.org)
@@ -79,6 +79,6 @@ IRC 사용방법을 모른다면, [client](https://kiwiirc.com/client/chat.freen
 ## 개발 상태
 
 현재 SuperTux 0.6.2 (2020 년 5 월)가 출시되면서 Forest World는 거의
-유령 숲 섹션이 포함되어 개발 완료되었습니다. 그러나, 특히 Ghostree 레벨에서는 아직까지 개발단계라고 여겨집니다.
-왜냐하면, 다음 버전인 0.7.0 버전에서 보스와의 전투, 그래픽 및 새로운 세계와 같은 새로운 기능으로 대대적인 수정이 계획되어 있습니다. 
+유령 숲 섹션이 포함되어 개발 완료되었습니다. 그러나, 특히 Ghostree 레벨에서는 아직까지 개발단계라고 여겨지는데, 그 이유로는
+다음 버전인 0.7.0 버전에서 보스와의 전투, 그래픽 및 새로운 세계와 같은 새로운 기능으로 대대적인 수정이 계획되어 있기 때문입니다. 
 게임의 구조적인 피드백, 기여 또는 공유할 아이디어가 있다면, 주저하지말고 위에 제시된 커뮤니티 방식들을 통하여 당사에 문의해주세요.
