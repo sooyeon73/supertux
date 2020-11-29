@@ -1,56 +1,48 @@
-# SuperTux Coding Standards
+# SuperTux 코딩 기준
 
-## Language
+## 언어
 
-C++14 is the main langauge used for this project. GCC, Clang and MSVC are supported.
+C++14 는 이 프로젝트에 사용되는 메인 언어입니다. GCC, Clang 과 MSVC 가 지원됩니다.
 
-For better backward compatibilty with older compiler, namely gcc5,
-some C++14 features are restricted:
+이전의 컴파일러인 gcc5와의 더 나은 역호환성을 위해,몇몇 C++14의 기능이 제한욉니다:
 
-* generic lambda functions are not allowed, e.g. `[](auto foo){}`
-* tuple constructors have to be explicit, e.g. `std::tuple<int, int>{5, 6}`, not `{5, 6}`
+* 일반 람다 함수는 허용되지 않습니다. 예) `[](auto foo){}`
+* tuple 생성자는 명시적이어야합니다. 예) `std::tuple<int, int>{5, 6}`, not `{5, 6}`
 
-## Repository Structure
+## 저장소 구조
 
-Properly separate between generic engine code and game specific code whenever
-feasible.
+가능할때마다 일반 엔진 코드와 게임별 코드를 적절히 구분해주세요.
 
-Third party libraries are not allowed in `src/`, they go to `external/`.
+`src/`에서 제 3자 라이브러리는 허용되지 않고, `external/`로 갑니다.
 
-Third party libraries that are imported into `external/` as git
-submodule have to be forked and included into the SuperTux
-organisation on Github, not directly included from upstream.
+git 서브 모듈로써 ‘external/’로 가져오는 제 3자 라이브러리는 업스트림에서 직접적으로 포함되는 것이 아니라, GitHub의 SuperTux 조직에 fork되거나 포함되어야 합니다.
 
-## File Formating
+## 파일 형식 지정
 
-Do not have spaces at the end of lines.
+줄 끝에 공백을 만들지 마세요.
 
-Files should always end with `/* EOF */` and a newline or a similar
-marker approprimate for the given language. This marker can be left
-out for fileformats that have an end tag, e.g. `</html>`.
+파일은 항상 `/* EOF */`로 끝나야 하고, 새로운 줄이나 주어진 언어에 적절한 유사 마커로 끝나야 합니다.
+이 마커는 `</html>`와 같은 엔드 태그를 가진 파일 형식에서 생략할 수 있습니다.
 
-Aim for one file per class, small helper classes in the same file are ok.
+클래스 당 하나의 파일을 목표로 하며, 같은 파일에 있는 작은 헬퍼 클래스 정도는 괜찮습니다.
 
-## Includes
+## 포함되는 것들
 
-The path in `#include` directives must not contain `..`.
+`#include` 명령 경로에는 `..`를 포함하지 않아야 합니다.
 
-All paths for includes from SuperTux must be relative to the `src/`
-directory and use `#include "..."`.
+SuperTux가 포함하는 모든 경로는 `src/` 디텍토리에 상대적이어야 하며, `#include "..."`를 사용해야 합니다.
 
-Use the `#include <>` syntax for libraries in `external/`, use `cmake`
-to set the include path properly.
+`external/`라이브러리에 대해 `#include <>` 구문을 사용하고, 적절한 경로를 포함하게 하기 위해 `cmake`를 사용하세요.
 
-The order of includes shall be as follows, each of those subgroups
-shall be ordered alphabetically:
+포함 순서는 아래와 같아야 하며, 각각의 하위 그룹은 알파벳 순서대로 정렬되어야 합니다:
 
-* include of header file when in a .cpp file
-* include of the base class in a header file of a derived class
-* system includes
-* external includes
-* local includes
+* .cpp file파일에 헤더파일 포함
+* 파생되는 클래스의 헤더파일에 베이스 클래스를 포함
+* 시스템 포함
+* 외부 포함
+* 지역 포함
 
-Conditional includes should be indented.
+조건부로 포함되는 것은 들여쓰기 해주세요.
 
 ```c++
 #ifdef FOOBAR
@@ -58,36 +50,33 @@ Conditional includes should be indented.
 #endif
 ```
 
-Include guards are of the form:
+가드가 포함되면 형식은 다음과 같습니다:
 
 ```c++
 #ifndef HEADER_SUPERTUX_{PATH}_{FILE}_HPP
 #define HEADER_SUPERTUX_{PATH}_{FILE}_HPP
 ```
 
-`tools/fix_include_guards.sh` is a little script that will help to fix
-include guards on file renames.
+`tools/fix_include_guards.sh` 는 파일의 이름을 재정의 하기에 가드를 포함시키는 데 도움이 되는 작은 스크립트 입니다.
 
-## Variables
+## 변수
 
-Prefix member variable names with `m_`, global variables with `g_`, and static
-variables with `s_`. DynamicScopeRefs are prefixed with `d_`.
+멤버 변수 이름 앞에는 `m_`, 전역변수 앞에는 `g_`, 지역변수 앞에는 `s_`를 붙여주세요. 
+DynamicScopeRefs 앞에는 `d_`를 붙여주세요.
 
-## Classes
+## 클래스
 
-Mark all classes as `final` unless they are specifically designed
-with polymorphism in mind.
+다양한 모형을 염두해 두고 특별히 설계된 것이 아니라면, 모든 클래스에`final`이라고 표기해주세요.
 
-Mark all functions that override a virtual function in a base class with `override`.
+베이스클래스의 가상함수를 재정의하는 모든 함수에 `override` 표시를 해주세요.
 
-Write simple getters/setters inside a header file on a single line.
+한 줄의 헤더파일 안에 간단한 getter/setter를 표시해주세요.
 
-Properly separate data members and member functions. Do not mix them in the same
-`public`/`protected`/`private` section.
+데이터 멤버와 멤버 함수를 적절하게 분리해주세요. 같은 `public`/`protected`/`private` 부문 안에 섞지 말아주세요.
 
-List virtual functions before non-virtual functions.
+가상함수가 아닌 것들 앞에 가상함수를 나열해주세요.
 
-The order of declarations in a class shall be as follows:
+클래스 정의의 순서는 다음과 같습니다:
 
 ```c++
 class Foo final
@@ -95,142 +84,131 @@ class Foo final
 public:
 protected:
 private:
-   // type declarations, needs to come first as later stuff might depend on them
+   // 형식 선언, 나중에 다른 것이 형식을 사용할 수 있기 때문에 제일 처음에 올 필요가 있습니다.
 
 public:
 protected:
 private:
-   // static stuff
+   // 고정된 것
 
 public:
 protected:
 private:
-   // constructors
-   // destructor
+   // 생성자
+   // 소멸자
 
 public:
 protected:
 private:
-   // virtual member functions
-   // non-virtual member functions
-
+   // 가상 멤버 함수
+   // 비가상 멤버 함수
+   
 public:
 protected:
 private:
-   // member variables with an m_ prefix
+   // m_ 접두사가 붙는 멤버 변수
 
 private:
-  // non-copyable footer
+  // 복사할 수 없는 바닥글
   Foo(const Foo&) = delete;
   Foo& operator=(const Foo&) = delete;
 };
 ```
 
-## Pointers
+## 포인터
 
-Do not use raw pointers and `new`/`delete`, use
-`std::unique_ptr<>`/`std::make_unique<>` instead.
+원시 포인터와 `new`/`delete`를 사용하지 말고, 대신에 `std::unique_ptr<>`/`std::make_unique<>`를 사용하세요.
 
-Only use `std::smart_ptr<>` when sharing of data is required, prefer
-`std::unique_ptr<>` when possible.
+`std::smart_ptr<>`는 데이터 공유가 필요할 때만 사용하고 가능한 `std::unique_ptr<>`를 사용해주세요.
 
-Pass and return values as value, `&` or `const&`, only use `*` when
-the value is expected to be `nullptr`.
+`&` 이나 `const&`로 값을 전달하고 반환합니다. 값이 `nullptr`로 예상되는 경우에만 `*`을 사용해주세요.
 
-Do not pass values as `const std::unique_ptr<T>&` or `const
-std::shared_ptr<T>&`, dereference the pointer and pass as `const&`.
+값을 `const std::unique_ptr<T>&` 이나 `const std::shared_ptr<T>&`로 전달하지 말고, 포인터를 역참조하고 `const&`로 전달하세요.
 
-To check for nullptr, use an `if` statements with initializer when possible:
+nullptr를 확인하려면, 가능한 이니셜라이저가 있는 if문을 사용하세요:
 
 ```c++
 if (auto* ptr = get_ptr()) {
-  // code here
+  // 여기에 코드
 }
 ```
 
 ## auto
 
-Don't use `auto` for basic types (`int`, `float`, `std::string`, ...)
+기본 형식(`int`, `float`, `std::string`, ...)으로 `auto`를 사용하지 마세요.
 
-Only use `auto` when the exact type is unnecessary to know (e.g.
-iterators) or obvious from the context, (e.g. `auto foo =
-Foo::create()`)
+정확한 형식을 알 필요가 없는 경우(예를 들어, 반복자)이거나, 문맥에서 명확한 경우(예를들어, `auto foo = Foo::create()`)에만 `auto` 를 사용해주세요.
 
-Capture pointers as `auto*`, not just `auto`.
+포인터들을 `auto`가 아닌, `auto*`로 저장해주세요.
 
-Ues `const auto&` for loops to avoid copies.
+복제를 피하기 위해 루프의 경우에 `const auto&`를 사용해주세요.
 
-## Namespaces
+## 네임 스페이스
 
-Namespaces should be written in the form:
+네임 스페이스는 다음의 형식으로 적혀야 한다:
 
 ```c++
 namespace my_namespace {
 ...
-} // namespace my_namespace
+} // 네임 스페이스 my_namespace
 ```
 
-With no newline before the `{`. Do not indent the content inside the
-namespace. The namespace itself should be all lowercase.
+`{` 전에 새로운 줄이 없다. 네임 스페이스 내부에 내용을 들여쓰지 마세요. 네임 스페이스는 모두 소문자여야 합니다.
 
-## Compiler Warnings and Errors
+## 컴파일러 경고와 에러
 
-Compile with a maximum warning level and with `-Werror`. This can be accomplished with:
+최대 경고 레벨과 `-Werror`로 컴파일 해주세요. 이 작업은 다음을 통해 수행됩니다:
 
 ```console
 cmake .. -DCMAKE_BUILD_TYPE=Release  -DWARNINGS=ON -DWERROR=ON
 ```
 
-This requires, among other things:
+이를 위해 무엇보다 다음과 같은 것들이 필요합니다:
 
-* use of `final` and `override` keywords
+* `final` 과 `override` 키워드의 사용
 
-* use of `static_cast` and `reinterpret_cast`, not old style C casts
+* 구식의 C 캐스트가 아닌, `static_cast` 과 `reinterpret_cast` 사용
 
-* all member variables have to be initialized in the constructor
+* 모든 멤버 변수는 생성자에서 초기화 되어야 합니다
 
-* all `int`/`float` conversion has to be explicit
+* 모든 `int`/`float` 전환은 명시적이어야 합니다
 
-## Comments
+## 주석
 
-Avoid comments unless they explain something important and
-non-obvious. Document *why* the code does something, not *what* it
-does.
+중요하거나 명백하지 않은 것을 설명하는 것이 아니면 주석을 달지 마세요.
+코드가 무엇을 하느냐가 아닌, 무엇을 하는 이유를 문서화 하세요.
 
-Prefer to use good function and variable names to create
-self-documenting code.
+자체 문서화 코드를 만들 때 좋은 함수와 변수 이름을 사용하는 것이 좋습니다.
 
-Use the `//` syntax for regular comments, even multiline, don't use `/* */`.
+일반 주석에 `//` 를 사용하세요. 여러 줄이더라도 `/* */`를 사용하지 마세요.
 
-For Doxygen (code documentation), use the `/** */` syntax, don't use
-`/**<` and other styles of comments.
+Doxygen (코드 문서)의 경우에, `/**<`나 다른 스타일의 코멘트를 사용하지 말고, `/** */`를 사용해주세요.
 
-For translator information, use the `// l10n:` syntax.
+번역 정보의 경우, `// l10n:`를 사용해주세요.
 
-Don't do `*` prefix decorations in comments, keep things simple and
-compact:
+주석에 `*` 접두사를 쓰지 말고 단순하고 작게 유지해주세요:
 
 ```c++
 /*
- *  Don't do this
+ *  이런거 하지 마세요
  */
 ```
 
-Instead:
+대신에:
 
 ```c++
-// Do this
+// 이렇게 해주세요
 ```
 
-or:
+아니면:
 
 ```c++
-/** Also ok when it's a Doxygen comment */
+/** 코드 문서의 경우 이렇게 하는 것도 괜찮습니다 */
 ```
 
-## Spaces
+## 공백
 
-Use a space after `if`/`while`/`switch`/`for`:
+다음과 같이 `if`/`while`/`switch`/`for` 뒤에 공백(스페이스로)을 만들어주세요:
 
 `for (int i = 0; i < len; ++i) ...`
 
@@ -240,24 +218,23 @@ Use a space after `if`/`while`/`switch`/`for`:
 
 `switch (myenum) ...`
 
-But don't use a space after a function name:
+하지만 다음과 같이 함수 이름 뒤에는 공백을 만들지 말아주세요:
 
-`myfunc ()` // don't do this
+`myfunc ()` // 이렇게 하지 마세요
 
-`myfunc()` // do this
+`myfunc()` // 이렇게 해주세요
 
-## Line breaks
+## 줄 바꿈
 
-Write simple getters/setters inside a header file on a single line:
+다음과 같이, 한 줄로 헤더파일 안에 간단한 getters/setters를 써주세요:
 
 ```c++
 Vector get_pos() const { retun m_pos; }
 ```
 
-Don't include more complex functions inside a header file, unless it's
-necessary (template, performance).
+필요한 경우(템플릿, 성능)가 아니라면, 헤더 파일 안에 더 복잡한 함수를 포함하지 마세요.
 
-Declare functions like:
+다음과 같이 함수를 선언하세요:
 
 ```c++
 ReturnType
@@ -267,9 +244,7 @@ ClassName::function_name()
 }
 ```
 
-We don't have any hard rules on linebreaks before `{` inside
-functions, but generally prefer the no-linebreak version when doing
-simple one-liners and the other one when doing more complex stuff:
+다음과 같이, 내부에는 `{` 이전에 줄 바꿈에 대한 어떠한 어려운 규칙도 없지만, 한 줄일 때는 보통 줄 바꿈이 없는 것을 선호하고, 보다 복잡한 작업을 할 때는 다른 것을 선호합니다:
 
 ```c++
 if (foo) {
@@ -288,10 +263,6 @@ if (foo)
 }
 ```
 
-## Other Information
+## 이외의 정보
 
-More general info on good practices can be found in [Google's C++
-Style Guide](https://google.github.io/styleguide/cppguide.html) and in
-the [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines),
-note however that we do not strictly follow either of them and divert from
-them in some points, so just take them as general guidelines, not hard rules.
+좋은 사례에 대한 일반적인 정보는 [Google's C++ Style Guide](https://google.github.io/styleguide/cppguide.html)와 [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines) 안에서 찾을 수 있습니다. 그러나 우리는 두 가지 중 어느 한 가지를 엄격하게 따르지 않고, 어느 정도 벗어나므로, 단지 이것들을 엄격한 규칙이 아닌 일반적인 지침으로 받아들입니다.
