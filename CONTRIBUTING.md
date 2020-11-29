@@ -1,64 +1,42 @@
-# Contributing to SuperTux
+# SuperTux에 기여하기
 
-## Bug reports
+## 버그 알리기
 
-- GitHub Issues in English only. IRC support might be possible in other languages,
-  however English is generally preferred so everyone can understand what's happening.
-- Please check for duplicate issues on GitHub, as they're wasting the developers'
-  time.
-- Also try to check if your issue has been resolved in the development version.
-- Separate issues and feature requests. Don't put all in the same issue.
-- If you made a mistake in your bug report, please use GitHub's edit feature
-  to correct the wrong detail, instead of closing the old issue and opening a
-  new one.
+- GitHub 이슈는 영어로만 해주세요. IRC 지원은 다른 언어로도 가능할지도 모르지만, 다른 사람들이 무슨 일이 일어나고 있는지 알 수 있게 하기 위해 영어를 선호합니다.
+- 개발자의 시간을 낭비하지 않기 위해 GitHub에 중복된 이슈가 있는지 확인해주세요.
+- 또한 개발 버전에서 문제가 이미 해결되지는 않았는지도 확인해주세요.
+- 이슈와 기능 요청을 분리해주세요. 모든 것을 같은 이슈에 넣지 말아주세요.
+- 만약 당신이 버그를 알릴 때 실수를 했다면, 이전 이슈를 닫거나 새로운 것을 여는 대신, GitHub의 수정 기능을 사용해주세요.
 
+### 필수 정보
 
-### Required information
+우리가 확인할 수 있도록 버그를 알려줄 때, 아래의 세부사항들을 포함주세요:
 
-Please include the following details in your issue report so that we can investigate:
+- 메뉴의 왼쪽 아래 모서리나 ‘supertux2-v’에 보여지는 당신이 사용하고 있는 SuperTux 버전`.
+- 이름과 버전 세부사항을 포함한 당신의 커널, 운영체제, 기여 세부 정보.
+- 만약 가능하다면, 문제를 재현할 수 있는 단계를 제공해주세요.
+- 가능하다면, gdb나 코어 덤프의 역추적을 포함하는 것은 개발자들에게 매우 큰 도웁이 됩니다. 만약 당신이 GNU/Linux에 있고, 당신의 디스트로가 systemd를 사용하고 있다면 코어 덤프는 'coredumpctl(1)'을 이용할 수 있을 가능성이 높습니다.
 
-- The SuperTux version you're using, as printed in the bottom left corner of the
-  menu or in `supertux2 -v`.
-- Details about your kernel, operating system and distribution, including name
-  and version details.
-- If possible, provide steps to reproduce your issue.
-- If available, it's a great help for the developers to include a backtrace from
-  gdb or a core dump. If you're on GNU/Linux and your distro is using systemd, it's
-  highly likely that a core dump is available using `coredumpctl(1)`.
+### 관련된 이슈에 추가하기
 
-### Add-on related issues
+제 3자를 위한 지원은 제공되지 않습니다. (공식적인 추가들이나 언어 팩이 포함되지 않습니다.) 그러나, 수정이 포함된 SuperTux/addons 저장소에 대한 꺼내기 요청은 언제나 환영입니다.
 
-No support is provided for third-party add-ons (that doesn't include official
-add-ons or language packs). However, a pull request against the SuperTux/addons
-repository containing a fix is always welcome.
+### 번역에 대한 이슈
 
-### Translation issues
+번역에 관련된 이슈를 수정하거나 알리려면, Transifex를 이용해주세요.
 
-Please use Transifex to fix or report translation related issues.
+## 요청 꺼내기
 
-## Pull requests
-
-- No duplicate pull requests, please.
-- Please test your code to see if it works correctly. If the pull request
-  is untested or work-in-progress, please mention that.
-- Pull requests importing translation updates from Transifex are, unless requested
-  by a contributor, not very welcome.
-- Commit messages should follow this style:
-  - First line: Short summary, up to 72 characters
-  - An empty line, separating message subject and body
-  - Detailed explanatory text for the change which can include multiple paragraphs,
-    or bullet points. Maximum of 72 characters per line.
-  - If the commit fixes an issue reported on GitHub, please add another empty
-    line, followed by a line containing `Closes #xyz`, where `#xyz` is the issue
-    to close. See <https://help.github.com/articles/closing-issues-via-commit-messages/>
-    for a more detailed description of this feature.
-  - If the commit doesn't include any changes that need CI testing (code or
-    build system changes should always be CI tested, other things not), yet another
-    empty line, followed by a line containing `[ci skip]`. This makes the CI
-    ignore that commit.
-- Please [squash](https://help.github.com/articles/about-git-rebase/) commits that belong together.
-  If you forget initially, it's okay to force push to your own fork to fix it.
-- No merge commits inside pull requests. Use `git-rebase` to keep your branch
-  up-to-date.
-- To make it easier for everyone, don't make a pull request pulling your fork's
-  `master` branch.
+- 중복된 꺼내기 요청은 하지 말아주세요.
+- 코드가 잘 작동하는 지 보기 위해 코드를 테스트해주세요. 만약 꺼내기 요청이 검증되지 않았거나 진행중이라면 해당 사항을 언급해주세요.
+- Transifex에서 번역 업데이트를 불러오는 꺼내기 요청들은, 기여자에 의한 요청이 아니라면, 환영받지 못합니다.
+- Commit 메시지들은 다음 스타일을 따라야 합니다:
+  - 첫째줄: 최대 72자의 짧은 요약
+  - 메시지 제목과 본문을 나누는 빈 줄 삽입
+  - 여러 단락이나 글머리 기호를 포함할 수 있는 변경 사항에 대한 주석문. 최대 72자.
+  - 만약 GutHub에 보고된 문제가 해결되면 빈 줄을 하나 더 추가하고 `Closes #xyz`를 뒤에 포함시키세요, 여기서 `#xyz`는 닫아야할 이슈입니다. 이 기능에 대한 자세한 설명은 <https://help.github.com/articles/closing-issues-via-commit-messages/>를 참조해주세요.
+  - 만약 commit이 CI 테스트(코드 또는 빌드 시스템 변경은 항상 CI 테스트로 해야하며 다른 것은 하지 않아야한다)가 필요한 어던 변경 사항도 포함하지 않는다면, 또 다른 빈 줄에 '[ci skip]'이 들어간 줄이 뒤따른다. 이것은 Ci가 commit을 무시하게 만든다.
+- 함께 속하는 commit을 [squash](https://help.github.com/articles/about-git-rebase/)해주세요.
+  처음에 잊어버렸다면, 당신의 fork에 강제로 넣어서 수정하는 것도 좋습니다.
+- 꺼내기 요청 안에는 병합 commit이 없습니다. 당신의 branch를 최신 상태로 유지하려면 `git-rebase`를 사용하세요.
+- 모든 사람이 쉽게 할 수 있도록 만들려면, 당신 fork의 'master' branch를 꺼내는 꺼내기 요청을 하지 마세요.
