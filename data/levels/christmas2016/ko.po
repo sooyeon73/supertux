@@ -19,24 +19,24 @@ msgstr ""
 
 #: data/levels/christmas2016/christmas1.stl:3
 msgid "Ready for Christmas"
-msgstr ""
+msgstr "크리스마스를 위한 준비 완료"
 
 #: data/levels/christmas2016/christmas2.stl:3
 msgid "Up and Down"
-msgstr ""
+msgstr "위 아래"
 
 #: data/levels/christmas2016/christmas3.stl:3
 msgid "Find the Perfect Tree"
-msgstr ""
+msgstr "완벽한 나무를 찾으세요"
 
 #: data/levels/christmas2016/intro.stl:3
 msgid "Christmas Time?"
-msgstr ""
+msgstr "크리스마스 때?"
 
 #: data/levels/christmas2016/outro.stl:3
 msgid "Christmas Time!"
-msgstr ""
+msgstr "크리스마스 시간!"
 
 #: data/levels/christmas2016/worldmap.stwm:3
 msgid "Christmas 2016"
-msgstr ""
+msgstr "2016 "
