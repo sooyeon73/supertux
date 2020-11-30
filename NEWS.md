@@ -1,26 +1,26 @@
-SuperTux Release and Development Notes
+SuperTux 출시 및 개발 노트
 ======================================
 
 SuperTux 0.6.2 (2020-05-14)
 ---------------------------
-The SuperTux Team is excited to announce the availability of SuperTux 0.6.2. This release fixes a number of bugs that were reported after 0.6.1. It also features reworked graphics and levels. 
+SuperTux Team은 SuperTux 0.6.2의 가능성을 발표하게 되어 들떠있다. 이번에 공개된 것은 0.6.1. 이후 보고된 많은 버그들을 수정했다. 그래픽과 레벨도 리워크된 것이 특징이다. 
 
-Other changes include a power-up counter in the hud, new sprites for the door, a new tileset and several new badguys. But overall, this release is supossed to celebrate our anniversary (May 2000) with a little surprise Add-On, which can be found in the contrib levels!
+다른 변화들은 hud안에 있는 파워업 카운터, 문을 위한 새로운 sprite들, 새로운 tileset 그리고 몇몇 새로운 badguy들이 있다. 하지만 전반적으로, 이 발표는 우리의 기념일(2000년 5월)을 기념하기 위해 초대되었다. 기여하는 수준에서 찾을 수 있는 약간 놀라운 추가 기능으로!
 
-Changes:
-  - A new worldmap, "Revenge In Redmond" celebrating SuperTux's 20th anniversary, which includes new enemies and sprites !!!
-  - New and improved backgrounds and sprites
-  - Improvements to many levels in the Icy Island and forest world
-  - Speed improvements for levels using a huge amount of lava tiles
-  - An issue causing the bridge in the forest world to not be shown in certain cases was fixed
+변화:
+  - 새로운 적과 스프라이트가 포함된 슈퍼턱스의 20주년을 기념하는 새로운 세계지도 '리벤지 인 레드몬드'!!!
+  - 새롭고 향상된 배경 및 스프라이트
+  - 얼음섬과 숲세계의 많은 레벨 개선
+  - 엄청난 양의 용암 타일을 사용하여 레벨 속도 향상
+  - 숲 속 다리가 특정 경우에 나타나지 않는 문제 해결됨.
 
 SuperTux 0.6.1 (2019-12-15)
 ---------------------------
-The SuperTux Team is excited to announce the availability of SuperTux 0.6.1. This is first and foremost a bugfix release that fixes reported issues after the release of 0.6.0 a year ago, however, we also introduced a lot of other changes, such as new graphics, levels and other game content.
+SuperTux Team은 SuperTux 0.6.1의 가능성을 발표하게 되어 들떠있다. 이는 처음이자 맨 먼저 1년 전 0.6.0출시 이후 보고된 이슈를 수정하는 버그픽스 출시인데, 우리는 새로운 그래픽, 레벨, 기타 게임 콘텐츠와 같은 많은 다른 변화들도 소개했다.
 
-Changes:
-* Rework of the first 3 Bonus Worlds
-* Added 3 new bonus worlds to the core game
+변화:
+* 처음 3개의 보너스 월드 리워크
+* 핵심 게임에 새로운 보너스 월드 3개 추가
 * Improvements to the story mode
 * Addition of Ghost Forest to the Story Mode
 * New Backgrounds and Music by BlasterMaster
