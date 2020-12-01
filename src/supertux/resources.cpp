@@ -93,6 +93,8 @@ Resources::get_font_for_locale(const std::string& locale)
     return "fonts/NotoSansCJKjp-Medium.otf";
   if(locale == "he")
     return "fonts/shuneet3-medium.otf";
+  if(locale == "ko")
+    return "fonts/ko_NanumBarunGothic.ttf";
   return "fonts/SuperTux-Medium.ttf";
 }
 
