@@ -21,278 +21,247 @@ SuperTux Team은 SuperTux 0.6.1의 가능성을 발표하게 되어 들떠있다
 변화:
 * 처음 3개의 보너스 월드 리워크
 * 핵심 게임에 새로운 보너스 월드 3개 추가
-* Improvements to the story mode
-* Addition of Ghost Forest to the Story Mode
-* New Backgrounds and Music by BlasterMaster
-* Tiles and Sprites Improvements by Alzter, weluvgoatz and RustyBox
-* New enemy: The Ghoul
-* Fixes and optimizations (Fixing buggy controls, game speed, etc.)
-* Level Editor Improvements, Fixes and Optimisations
-* Revamp of the Credits Menu
-* Blocks (and other objects behaving like blocks, such as lanterns) no longer jitter when stacked on top of one another
-* Trampolines as bonus block contents no longer hurt Tux
-* An issue causing music not to get saved in the level editor was fixed
+* 스토리 모드 개선
+* 스토리 모드에 고스트 숲 추가
+* 새로운 배경과 음악 by BlasterMaster
+* 타일 및 스프라이트 개선 by Alzter, weluvgoatz and RustyBox
+* 새로운 적: The Ghoul
+* 수정 및 최적화(버기 컨트롤, 게임 속도 등 수정)
+* 레벨 편집기 개선, 수정 및 최적화
+* 크레딧 메뉴 변경
+* 블록(등불과 같이 블록처럼 동작하는 다른 물체들)이 서로 위로 쌓일 때 더이상 jitter를 사용하지 않음
+* 보너스 블록 콘텐츠인 트램폴린은 더 이상 Tux에 해를 끼치지 않는다.
+* 음악이 레벨 편집기에 저장되지 않도록 하는 문제 해결.
 
 SuperTux 0.6.0 (2018-12-23)
 ---------------------------
 
-The SuperTux team is excited to announce the availability of the first alpha for the upcoming stable release 0.6.0 after almost two years of development.
+SuperTux team은 거의 2년간의 개발 끝에 다가오는 안정적 출시 0.6.0의 첫번째 알파 출시 가능성을 발표하게 되어 들뜬다.
 
-Changes:
-* Complete redesign of the icy world and forest world
-* Complete revamp of our rendering engine, the game should be much faster than it was previously
-* We now support OpenGL 3.3 Core as well as OpenGL ES 2.0, thus allowing SuperTux to be run on the Raspberry Pi, and potentially WebGL.
-* A few graphics have been updated, and effects have been added
-    * The save bell was reworked (Thanks to Raghavendra "raghukamath" Kamath!)
-    * Improved big Tux graphics (Thanks to Alzter)
-    * Various effects and shaders (Thanks to Grumbel)
-* Support for right-to-left languages through vector fonts. This will also fix a few non-ASCII characters, which often caused problems before in translations
-* Forest worldmap redesigned with new levels and other redesigned levels (Thank you, RustyBox and Serano)
-* A lot of other under-the-hood changes and bugfixes
-* Official Linux binaries
+변화:
+* 빙판세계와 숲세계의 완벽한 재설계
+* 렌더링 엔진을 완전히 개조하여 이전보다 훨씬 빠른 속도로 게임 진행 가능.
+* OpenGL 3.3 Core와 OpenGL ES 2.0을 지원하므로 SuperTux가 라즈베리파이에서 실행될 수 있고 잠재적으로 WebGL이 실행될 수 있다.
+* 몇개의 그래픽이 업데이트되었고, 효과가 추가되었다.
+    * 세이브 벨 재작업됨 (Raghavendra "raghukamath" Kamath 덕분에!)
+    * 향상된 빅 턱스 그래픽 (Alzter 도움)
+    * 다양한 효과 및 쉐이더 (Grumbel 도움)
+* 벡터 글꼴을 통한 오른쪽에서 왼쪽 언어 지원. 번역할 때 아스키 문자가 아니면 나타났던 몇몇 문제를 해결할 수 있다.
+* 새로운 레벨과 다른 재설계된 레벨로 재설계된 포레스트 월드맵 (RustyBox and Serano 도움)
+* 많은 under-the-hood의 변화들과 버그수정
+* 공식 Linux 바이너리
 
-**Note:** If you've previously used torches in your levels and their positioning is off, please re-position them. We had to re-align their bounding boxes in order to fix bugs with their flame.
+**Note:** 이전 레벨에서 torche를 사용한 적이 있으며 위치가 꺼져있는 경우 torche를 다시 배치하세요. 우리는 flame으로 벌레를 고정시키기 위해 그들의 경계 상자를 다시 정렬해야 했다.
 
 SuperTux 0.5.1 (2016-11-05)
 ---------------------------
 
-This is a bugfix release fixing some smaller problems that were reported after
-the release of 0.5.0. It mostly features changes to the behavior of the level
-editor, and adds some options that were missing but should have been included in
-the stable release 0.5.0.
+이것은 버그픽스 릴리스로 이후에 보고된 몇가지 작은 문제를 해결한 것이다. 0.5.0의 발매는 대부분 레벨의 행동 변화를 특징으로 한다.
+편집기와 누락되었지만 포함되어야 하는 일부 옵션 추가됨. 0.5.0의 안정된 릴리즈
 
-Changes:
+변화:
 
-* Editor: Tilemap: Add an option to change the draw target
-* Editor: Add an option to snap objects to the grid (this will make it easier to
-  add objects to a nice location in levels)
-* Editor: Camera: Remove autoscroll option, as it is deprecated and should not
-  be used anymore
-* Editor: Fix an issue where some areas in the editor would be excessively large
-  relative to the window/screen size
+* 편집기: 타일맵: 그리기 대상을 변경하는 옵션 추가
+* 편집기: 그리드에 객체를 스냅하는 옵션 추가(레벨별로 좋은 위치에 객체 추가하기 더 쉽게 만들었다.)
+* 편집기: 카메라: 사용되지 않으며 더 이상 사용해서는 안 되는 자동 스크롤 옵션 제거
+* 편집기: 편집기의 일부 영역이 창/화면 크기에 비해 지나치게 큰 문제 해결
 
 SuperTux 0.5.0 (2016-09-25)
 ---------------------------
 
-The SuperTux team is excited to announce the availability of the stable release 0.5.0 after less than a year of development. The most prominent change for this release is a new in-game level editor which allows you to create levels and worldmaps on-the-fly from within SuperTux itself.
+The SuperTux team은 개발 1년도 되지 않아 안정적인 0.5.0의 가능성을 발표하게 돼 들떠있다. 이번 출시에서 가장 두드러진 변화는 슈퍼턱스 자체 내에서 레벨과 월드맵을 즉각적으로 만들 수 있는 새로운 게임 내 레벨 에디터다.
 
-Changes:
+변화:
 
-* In-game level editor
-* Improved levels in Antarctica and Forest Island
-* Language packs are fixed
-* Engine performance improvements
-* Extended the scripting API: gradients are now scriptable
-* Added a few more tiles and music
-* New console commands and command line options (related to the editor)
-* Various other bugfixes of issues reported since the v0.4.0 release
-* And more (minor) improvements and changes
+* 게임 안의 레벨 편집기
+* Antarctica와 Forest Island의 향상된 레벨
+* 언어팩 수정
+* 엔진 성능 개선
+* 확장된 scripting API: 그라데이션은 이제 scripting가능하다.
+* 타일 및 음악 추가
+* 새 콘솔 명령 및 명령줄 옵션(편집기 관련)
+* v0.4.0릴리스 이후 보고된 다양한 기타 버그 수정 사항
+* 더 많은 (사소한) 개선 및 변경사항
 
-Changes from 0.5.0-rc.1 (2016-08-05):
+0.5.0-rc.1 에서 변경된 것 (2016-08-05):
 
-* Fixed build system in order to correctly support SemVer pre-release tags
-* Fixed miniswig compilation
-* Editor: correctly join paths (using FileSystem::join())
-* Editor: LevelDot: add a NULL check to prevent a crash when editing worldmaps
-* Editor: correctly save BadGuy and Dispenser direction
-* Editor: reorder layer objects when their object menu is closed
-* Editor: allow setting z-pos of decals
-* Editor: display a notile when the tile ID is invalid
-* Editor: make it possible to switch tilesets
+* SemVer 사전 릴리스 태그를 올바르게 지원하기 위한 고정 빌드 시스템
+* 고정된 miniswig 컴파일
+* 편집기: 경로에 올바르게 연결 (FileSystem::join() 사용)
+* 편집기: LevelDot: 월드맵 편집 시 충돌을 방지하기 위해 NULL 검사를 추가하십시오.
+* 편집기: BadGuy 및 디스펜서 방향을 올바르게 저장
+* 편집기: 객체 메뉴가 닫힐 때 도면층 객체의 순서 변경하십시오.
+* 편집기: 스티커의 z-pos 설정 허용
+* 편집기: 타일 ID가 유효하지 않은 경우 메모 표시
+* 편집기: 타일 세트 전환 가능
 
-Changes from 0.5.0-rc.2 (2016-08-10):
+0.5.0-rc.2 에서 변경된 것 (2016-08-10):
 
-* Editor: Torch: make it possible to change the sprite (#541)
-* Don't turn Tux into stone above ground when using earth bonus (#537)
-* WillOWisp: get name property in order to fix a scripting issue (#529)
-* Editor: don't play WillOWisp sound
-* Editor: move moving objects to the center of the mouse pointer when adding
-* Editor: Switch: make sprite option visible again
-* Make use of auto pointers and modern iterators where appropriate
-* README: various updates related to download count
-* Save and load visibility of SpriteChange tiles in squirrel table (#342)
-* Editor: Fix an issue where the name of a scripted object wouldn't be saved (#557)
-* Editor: add an alignment option for background (#547)
-* Editor: Better approach for layer removal (#510)
-* Add a launcher script for Windows builds (#443)
+* 편집기: 토치: 스프라이트 변경 가능 (#541)
+* 흙 보너스를 사용할 때 턱스를 땅 위의 돌로 만들지 마십시오. (#537)
+* WillOWisp: 스크립팅 문제를 수정하기 위해 이름 속성 가져오기 (#529)
+* 편집기: WillOWisp 사운드를 재생하지 않음 
+* 편집기: 추가 할 때 움직이는 개채를 마우스 포인터 중앙으로 이동
+* 편집기: 스위치: 스프라이트 옵션을 다시 표시
+* 적절한 경우 자동 포인터와 modern iterator를 사용하십시오.
+* README: 다운로드 수와 관련된 다양한 업데이트
+* squirrel table의 스프라이트 저장 및 로드 가시성 변경 (#342)
+* 편집기: 스크립트에 사용되는 개체의 이름이 저장되지 않는 문제 수정 (#557)
+* 편집기: 배경에 선형 옵션 추가 (#547)
+* 편집기: 도면층 제거를 위한 더 나은 접근 방식 (#510)
+* 윈도우즈 빌드에 대한 시작 관리자 스크립트 추가 (#443)
 
-Changes from 0.5.0-rc.3 (2016-08-26):
+0.5.0-rc.3 에서 변경된 것 (2016-08-26):
 
-* Fixes for the build system and updates with regard to the automatic deployment
-  of releases
-* More code style fixes
-* Editor: verify some level properties have been set
-* Add the possibility to add sawblade/hurting platforms using the editor
-* Jump with Up: mark as deprecated in KeyboardMenu and JoystickMenu (addresses
+* 출시 자동 배포와 관련된 빌드 시스템 및 업데이트 수정
+* 추가 코드 스타일 수정
+* 편집기: 일부 수준 속성이 설정되었는지 확인
+* 편집기를 사용하여 sawblade/hurting 플랫폼을 추가할 수 있는 기능 추가
+* 위로점프: 키보드메뉴 및 조이스틱메뉴에서 더 이상 사용되지 않는 것으로 표시 (addresses
   #499)
-* Fix an issue with odd behavior of music playback (#583)
-* Update some parts of the (user) documentation
-* Editor: multiple fixes to levelset and worldmap creation, including UX
-  improvements
-* Editor: Angle option for spotlight
-* Unify string spelling for consistency
-* String freeze for translators is now in effect
-* Editor: sort layer in ascending order
-* Scripting: deduplicate code using the ExposedObject template class
-* Update the translations to reflect the translation progress as of 2016-09-12
+* 음악 재생의 비정상적인 동작 문제 해결 (#583)
+* (사용자) 설명서의 일부 업데이트
+* 편집기: 레벨셋 및 월드맵 생성에 대한 여러 수정사항(UX 개선사항 포함)
+* 편집기: 스포트라이트용 각도 옵션
+* 일관성을 위해 문자열 철자 통일
+* 번역기용 문자열 동결 현재 시행 중
+* 편집기: 도면층을 오름차순으로 정렬
+* 스크립팅: ExpectedObject 템플릿 클래스를 사용하여 코드 중복 제거
+* 2016년 09월 12일 현재 번역 진행률을 반영하도록 번역 
 
-Changes from 0.5.0-rc.4 (2016-09-12):
+0.5.0-rc.4 에서 변경된 것 (2016-09-12):
 
-* Use PhysFS file system abstraction for is\_directory checks
-* Prevent statistics text from overlapping
-* Fix a bug with Level.edit() in squirrel (#207)
+* is\_directory 체크를 위해 PhysFS file을 활용한 시스템 추상화
+* 통계 텍스트가 겹치지 않게 방지
+* squirrel의 Level.edit()로 버그 수정 (#207)
 
-Changes from 0.5.0-rc.5 (2016-09-23):
+0.5.0-rc.5 에서 변경된 것 (2016-09-23):
 
-* Stop looping sounds when dead
-* Final translation update
+* 죽었을 때 루핑 중지
+* 최종 번역 업데이트
 
 SuperTux 0.4.0 (2015-12-20)
 ----------------------------
 
-Compared to 0.1.3, this release features:
+0.1.3와 비교하여, 이번 릴리즈 기능:
 
-* a nearly completely rewritten game engine based on OpenGL, OpenAL, SDL2, ...
-* support for translations
-* in-game manager for downloadable add-ons and translations
-* Bonus Island III, a for now unfinished Forest Island and the development levels in Incubator Island
-* a final boss in Icy Island
-* new and improved soundtracks and sound effects
-* new badguys, bonuses and power-ups (air-, earth- and ice-flower)
-* a halloween tilemap
-* new graphic effects (glowing objects, particles, ...)
-* levels and worldmaps are scriptable using [squirrel](http://squirrel-lang.org/)
-* much more game objects: trampolines, switches, portable stones, wind, moving platforms, ... - most of them have scripting APIs
-* improved statistics
-* many invisible changes, like unit tests, efficiency improvements and more bugfixes
-* much more...
+* OpenGL, OpenAL, SDL2등을 기반으로 거의 완전히 다시 작성된 게임 엔진.
+* 번역 지원
+* 다운로드 가능한 추가 기능 및 번역을 위한 게임 내 관리자
+* 보너스 섬 3, 현재 미완료 포레스트 섬 및 인큐베이터 섬 개발 레벨
+* 아이스 아일랜드의 최종 보스
+* 새롭고 개선된 사운드 트랙과 음향 효과
+* 새로운 악당들, 보너스 및 파워업(air-, earth- 그리고 ice-flower)
+* 할로윈 맵
+* 새로운 그래픽 효과(일반적인 객체, 입자 등)
+* [squirrel](http://squirrel-lang.org/)를 사용한 스크립팅
+* 훨씬 더 많은 게임 객체: 프램폴린, 스위치, 휴대용 스톤, 바람, 이동 플랫폼 등등 - 대부분은 스트립팅 API를 가지고 있다.
+* 통계 개선
+* 단위 테스트, 효율성 향상 및 더 많은 버그 수정과 같은 보이지 않는 많은 변화.
+* 등등
 
-Compared to the latest beta, 0.3.5a, this release features:
+마지막 베타였던 0.3.5a과 비교하여, 이번 릴리즈 기능:
 
-* updated translations
-* reworked add-on manager to support downloadable and updatable localization packs
-* many bugfixes
-* added iced-graphics to some more badguys
-* melting animation for some badguys
-* updated more levels (fix playability, ...)
-* updated build system, featuring unit tests, libraries as git submodules and improved Travis-CI builds to support nightly builds
-* more levels in Incubator Island
-* support for horizontal and vertical gradients that span the length / height of a sector. Add `(direction "horizontal_sector / vertical_sector")` to your gradient.
-* much more...
+* 번역 업데이트
+* 다운로드 및 업데이트 가능한 지역화 팩을 지원하기 위해 재작업된 추가 기능 관리자
+* 많은 버그 수정
+* iced-graphics에 악당 추가
+* 몇몇 악당들을 위한 녹는 애니메이션
+* 더 많은 레벨 업데이트(픽스 재생성, ...)
+* 유닛 테스트, git 하위 모듈로서의 라이브러리 및 야간 빌드를 지원하기 위한 개선된 Travis-CI 빌드를 포함하는 업데이트된 빌드 시스템
+* 인큐베이터 아일랜드의 더 높은 레벨
+* 섹터의 길이/높이에 걸친 수평 및 수직 구배 지원. `(direction "horizontal_sector / vertical_sector")`에 당신의 변화를 추가하시오.
+* 등등
 
 SuperTux 0.3.5a (2015-05-01)
 ----------------------------
 
-A bugfix release is sneaking in. 3 weeks after 0.3.5 was released it's time to
-fix some bugs. This affects mostly the windows installer where some libraries
-were missing and add-ons couldn't be downloaded. Luckily we managed to get all
-of these nasty bugs away.
-One more patch affects linux packagers: The AppData file from our repository is
-now contained in the source package.
-Thanks to the activity of some translators there are also new translations in
-this release.
+버그픽스 방출이 몰래 들어오고 있다. 0.3.5가 나온 지 3주 만에 버그를 고쳐야 한다.
+이는 대부분 일부 라이브러리가 누락되어 추가 기능을 다운로드할 수 없었던 Windows 설치 프로그램에 영향을 미친다.
+다행히도 우리는 이 고약한 들을 모두 없앨 수 있었다. 
+리눅스 패키지 프로그램에 영향을 주는 패치가 하나 더 있다: 저장소의 AppData 파일이 이제 소스 패키지에 포함되어 있음.
+일부 번역가의 활약 덕분에 이번 번역본에도 새로운 번역본이 등장하고 있다.
 
-If you want to help us and improve SuperTux, join our IRC channel #supertux on
-chat.freenode.net or write to the mailing list!
+우리를 돕고 SuperTux를 향상시키고 싶다면, chat.freenode.net의 IRC 채널 #superTux에 가입하거나 메일링 리스트에 글을 쓰세요!
 
 
 SuperTux 0.3.5 (2015-04-11)
 ---------------------------
 
-In celebration of SuperTux's 15 year anniversary, we are releasing SuperTux 0.3.5.
+SuperTux의 15주년을 기념하여 SuperTux를 발매한다.턱스 0.3.5.
 
-This release includes the switch to SDL2 for graphics rendering, a few performance
-improvements, tons of bugfixes, new tiles and badguys amongst other things.
+이 릴리스에는 그래픽 렌더링을 위한 SDL2로의 전환, 몇 가지 성능 개선, 수많은 버그 픽스, 새로운 타일 및 배드 게이지 등이 포함되어 있다.
 
-NOTE: Due to the planned shutdown of Google Code, the SuperTux source code has
-moved to GitHub. You can find all the repositories here:
+참고: 구글 코드의 계획된 종료로 인해, SuperTux 소스 코드는 GitHub로 이동했다. 다음 위치에서 모든 리포지토리를 찾을 수 있다.
 https://github.com/SuperTux/supertux
 
-A more detailed changelog for this release is available at
+이 릴리스에 대한 자세한 변경 로그는 다음 사이트에서 확인하십시오.
 http://supertux.lethargik.org/wiki/Changelog_0.3.5
 
-Major changes in this release:
+이 릴리스의 주요 변경 사항:
 
-* move to SDL2 for graphics rendering
-* glow effects
-* new badguys: iceflame, ghostflame, livefire, goldbomb, smartblock
-* new bonuses: coinrain, coinexplode
-* statistics improved
-* icy island levels tweaked
-* new sounds
-* massive improvements to localization
-* efficiency tweaks
-* menus reworked
-* addon manager improved
-* new tilemap: halloween
-* new powerups: air- and earth-flower
-* support for horizontal gradients in levels (add
-(direction "vertical|horizontal") to your level)
-
+* 그래픽 렌더링을 위해 SDL2로 이동
+* 빛 효과
+* 새로운 악당: iceflame, ghostflame, livefire, goldbomb, smartblock
+* 새로운 보너스: coinrain, coinexplode
+* 통계 개선
+* icy island레벨 수정
+* 새로운 사운드
+* 지역화 대폭 개선
+* 효율적으로 수정
+* 메뉴 재수정
+* 애드온 관리자 향상
+* 새로운 타이틀맵: halloween
+* 새로운 파워업: air- and earth-flower
+* 수평 그라데이션 수준 지원(수준에 대한 추가(방향 "direction"|present)")
 
 SuperTux 0.3.4 (2013-07)
 ------------------------
 
-It's been more than three years since the last development snapshot for
-Milestone 2 of SuperTux, making this a bit overdue. Once again it is hard to
-say what the most notable changes are, but one thing players should notice is
-a greater wealth of levels to play through an expanded avalibility of add-ons.
+슈퍼턱스 마일스톤2의 마지막 개발 스냅샷이 나온 지 3년이 넘어 다소 늦어진 셈이다. 다시 한 번 가장 주목할
+만한 변화가 무엇인지 말하기는 어렵지만, 플레이어들이 주목해야 할 한 가지는 확장된 애드온을 통해 더 많은
+레벨의 플레이를 할 수 있다는 것이다.
 
-Additionally, SuperTux development has moved to GitHub. Check it out at:
+게다가, SuperTux 개발은 GitHub로 옮겨갔다. 다음 사이트에서 확인하십시오.
 https://github.com/SuperTux/supertux/
 
-If you are intersted in contribuiting to SuperTux, please do so. The more
-people working on the project, the faster development can continue. The hope
-is that this release will generate more interest which will lead to more
-frequent releases. You can refer to the GitHub wiki page on "Contributing" to get
-started.
-
-And of course, enjoy the game and have fun!
+만약 당신이 SuperTux에 기여하는 일에 관여한다면 그렇게 하시오. 이 프로젝트에 더 많은 사람들이 참여할수록,
+더 빠른 발전이 계속될 수 있다. 이번 출시가 더 많은 관심을 불러일으켜 더 빈번한 출시를 이끌어낼 수 있기를 희망한다.
+시작하려면 "Contrituting"의 GitHub Wiki 페이지를 참조하십시오.
+그리고 물론, 게임을 즐기세요!
 
 
 SuperTux 0.3.3 (2010-02-26)
 ---------------------------
 
-After more than three years of development the SuperTux development team has
-agreed to package a development snapshot of Milestone 2 of our jump and run
-game.
+3년 이상의 개발 끝에, SuperTux 개발팀은 우리의 점프와 룬게임의 마일스톤 2의 개발 스냅숏을 패키지로 만들기로 합의했다.
 
-Unfortunatly, after such a long time it's hard to say what the most notable
-changes are. We hope that the game engine is more stable (or at least more
-advanced ;) and that the game is more fun to play overall.
+불행하게도, 그렇게 오랜 시간이 지난 후에 가장 주목할 만한 변화가 무엇인지 말하기는 어렵다.
+우리는 게임 엔진이 더 안정적이기를 바란다(또는 적어도 더 발전되기를;) 그리고 전반적으로 게임을 하는 것이 더 재미있기를 바란다.
 
-
-We hope you enjoy SuperTux. Now off you go, rescue Penny! ;)
+우리는 네가 SuperTux를 즐기길 바란다. 어서 가, 페니를 구출해! ;)
 
 
 SuperTux 0.3.2-SVN (2007-12-20)
 -------------------------------
 
-Just in time for Christmas, we bring you SuperTux 0.3.2-SVN, a preview
-of SuperTux Milestone 2.
+크리스마스 때맞춰, 우리는 너에게 슈퍼를 가져다줄게.SuperTux 마일스톤 2의 예고편인 Tux 0.3.2-SVN.
 
-This build doesn't contain all levels planned for Milestone 2 and
-its story is by no means complete, but the game is already fun to
-play.
+이 빌드는 마일스톤 2를 위해 계획된 모든 레벨이 포함되어 있지 않으며, 그 스토리가 결코 완전한 것은 아니지만, 게임은 이미 하기에는 재미있다.
 
-SuperTux 0.3.2-SVN features:
+SuperTux 0.3.2-SVN 기능들:
 
-* new, OpenGL- and OpenAL-based engine
-* final boss for Icy Island
-* brand new Forest World with new badguys and new game objects
-* new and improved soundtrack, immersive sound effects
-* much more...
+* 새로운 OpenGL 기반 및 OpenAL 기반 엔진
+* 아이스 아일랜드의 최종 보스
+* 새로운 악당과 새로운 게임 오브젝트로 새로운 포레스트 월드 브랜드
+* 새롭고 개선된 사운드트랙, 몰입적인 사운드 효과
+* 등등
 
-The changes in more detail: The SuperTux 0.1 engine was nearly
-completely rewritten. The game is translatable now, a new camera
-algorithm allows scrolling in all four directions. Collision
-detection supports slopes and moving objects now. We have scripting
-support for dynamic level events and animations. New game objects
-include trampolines, switches, portable stones, upside-down
-levels, wind, moving platforms and particle effects. The sound
-system is now OpenAL-based with an improved soundtrack now played
-from Ogg/Vorbis-files, which were pre-rendered on a high-class
-synthesizer.
+자세한 변경 내용: 슈퍼턱스 0.1 엔진은 거의 완전히 다시 쓰여졌다. 이 게임은 이제 번역이 가능해졌고,
+새로운 카메라 알고리즘은 네 방향으로 스크롤할 수 있게 되었다.
+충돌 탐지는 지금 경사면과 움직이는 물체를 지원한다. 우리는 동적 수준 이벤트와 애니메이션을 위한 스크립팅 지원을 가지고 있다.
+새로운 게임물에는 트램폴린, 스위치, 휴대용 돌, 거꾸로 된 레벨, 바람, 움직이는 플랫폼, 입자 효과 등이 포함된다.
+사운드 시스템은 현재 Ogg/Vorbis 파일에서 재생되는 향상된 사운드 트랙을 갖춘 OpenAL 기반이며,
+이 사운드 트랙은 고급 싱크로나이저에서 미리 렌더링되었다.
 
-This is also a call for artists and coders: If you like the game in
-its current state, join us and help us finish Milestone 2!
+이것은 또한 예술가들과 코더들을 위한 요구다. 현재 상태의 게임이 마음에 들면, 우리와 함께 마일스톤 2를 끝낼 수 있도록 도와주십시오!
