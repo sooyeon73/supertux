@@ -1,178 +1,150 @@
-Install instructions for SuperTux - <https://supertux.org/>
+SuperTux 설치 방법 - <https://supertux.org/>
 ====================================================================
-Last update: September 2, 2016
+마지막 업데이트: 2016년 9월 2일
 
 Binaries
 --------
 
-We try to provide precompiled binaries of SuperTux for a number of
-platforms. You should check <https://supertux.org/download.html>
-for the packages and instructions on how to install them. If there are
-no prebuilt binaries for your platform, then you might still be able
-to compile the source code yourself. In this case read the next
-sections.
+우리는 여러 플랫폼에 대해 슈퍼턱스의 사전 컴파일된 바이너리를 제공하려고 합니다.
+패키지와 설치 방법에 대한 지침은 <https://supertux.org/download.html>에서 확인하세요.
+플랫폼에 대해 사전 구축된 바이너리가 없는 경우에도 스스로 소스코드를 컴파일할 수 있습니다.
+이 경우에는 다음 섹션을 읽어주세요.
 
-
-Requirements
+요구사항
 ------------
 
-To build SuperTux from source, you need to have a number of tools and
-libraries installed. Note that most of these things should already be
-available prepackaged and optimized for your distribution, it is
-recommended that you check your distribution first before downloading
-from the websites. You can also check
-<https://github.com/SuperTux/wiki/blob/master/Building-SuperTux.md> for up-to-date
-build instructions for a variety of different platforms and
-distributions.
+원본에서 슈퍼턱스를 빌드하려면 여러 도구와 라이브러리가 설치되어 있어야 합니다.
+대부분 이러한 것은 미리 패키징되어 배포에 최적화되어 있어야 합니다.
+웹사이트에서 다운로드하기 전 배포를 먼저 확인하는 것이 좋습니다.
+또한 다양한 플랫폼 및 배포에 대한 최신 빌드 지침을
+<https://github.com/SuperTux/wiki/blob/master/Building-SuperTux.md>에서 확인할 수 있습니다.
 
-* General development tools:
-  - C++ compiler (choose one of the two options below):
-    + [gcc compiler suite](http://gcc.gnu.org) version 3.2 or newer (including g++)
-    + [LLVM compiler](http://llvm.org/) (you probably want the clang frontend too)
-  - [GNU Binutils](http://www.gnu.org/software/binutils) (or the BSD/OS X equivalent)
-  - a shell and common POSIX command line tools
-  - **Note:** To get these tools, you can install `build-essential` on Debian-based distros,
-    `base-devel` on Arch-based distros and the Xcode Command Line tools on OS X.
-* [CMake](http://www.cmake.org/) 3.1 or later: most package managers ship this as `cmake`
-* OpenGL headers and libraries: OpenGL libraries and headers are
-  specific to your graphics card. Make sure that you have hardware
-  accelerated OpenGL drivers installed. Software renderers like Mesa
-  will make SuperTux unplayable slow.
-* [SDL2](http://www.libsdl.org) (2.0.1 or later)
-* [SDL2_image](http://www.libsdl.org/projects/SDL_image) (2.0.0 or later)
-* [OpenAL](http://www.openal.org): (1.0 or later)
-* C++ OpenGL library (choose one of the two options below):
-  - [GLEW](http://glew.sourceforge.net/) or
+* 일반 개발 도구:
+  - C++ 컴파일러 (아래 두 옵션 중 하나를 선택하세요):
+    + [gcc compiler suite](http://gcc.gnu.org) version 3.2 또는 최신버전 (g++을 포함한)
+    + [LLVM compiler](http://llvm.org/) (당신이 프론트엔드도 원한다면)
+  - [GNU Binutils](http://www.gnu.org/software/binutils) (또는 the BSD/OS X equivalent)
+  - 셸 및 공통 POSIX 명령줄 도구.
+  - **알림:** 이 도구들을 얻기 위해, Debian기반 디스트로에 `build-essential`을 설치할 수 있습니다.
+    Arch 기반 디스트로의 "base-devel"과 OS X의 Xcode 명령줄 도구의 "base-devel"입니다.
+* [CMake](http://www.cmake.org/) 3.1 또는 이후 버전: 대부분의 패키지 매니저는 이것을 camake로 전달합니다.
+* OpenGL 헤더 및 라이브러리는 다음과 같습니다. OpenGL 라이브러리 및 헤더는 그래픽 카드에 따라 다릅니다.
+  하드웨어 가속 OpenGL 드라이버가 설치되어 있는지 확인합니다.
+  Mesa와 같은 소프트웨어 렌더러는 SuperTux를 더디게 재생되지 않게 합니다.
+* [SDL2](http://www.libsdl.org) (2.0.1 또는 이후버전)
+* [SDL2_image](http://www.libsdl.org/projects/SDL_image) (2.0.0 또는 이후버전)
+* [OpenAL](http://www.openal.org): (1.0 또는 이후버전)
+* C++ OpenGL library (아래 두개의 옵션 중 하나를 선택하세요):
+  - [GLEW](http://glew.sourceforge.net/) 또는
   - [glbinding](https://github.com/hpicgs/glbinding)
-* [Boost](http://www.boost.org) smart_ptr and format headers, along with date_time and filesystem libraries
-* [cURL](http://curl.haxx.se/libcurl/): for Add-on downloads
+* [Boost](http://www.boost.org) smart_ptr 및 형식 머리글과 date_time 및 filesystem 라이브러리가 있습니다.
+* [cURL](http://curl.haxx.se/libcurl/): 부가기능 다운로드를 위해
 * [libogg and libvorbis](https://www.xiph.org/)
 * [FreeType](https://www.freetype.org/)
-* [libraqm](https://github.com/HOST-Oman/libraqm): optional, but needed
-  to display Arabic
+* [libraqm](https://github.com/HOST-Oman/libraqm): 선택사항, 그러나 Arabic을 표시하기 위해 필요합니다.
 
-**Note I:** for any of the above listed libraries (OpenGL, SDL2, SDL2_image,
-OpenAL, GLEW/glbinding, Boost, cURL, libogg and libvorbis), you should
-also have development headers installed. Debian-based distributions have `-devel`
-packages containing the mentioned headers, on Arch Linux these should be included
-in the library package.
+**알림 I:** 위에 나열된 라이브러리(OpenGL, SDL2, SDL2_image, OpenAL, GLEW/glbinding, Boost,
+cURL, libogg 및 libvorbis)에 대해서도 개발 헤더를 설치해야 합니다. 데비안 기반 배포에는 언급된 헤더가 포함된
+'-devel' 패키지가 있습니다. Arch Linux에서는 이러한 헤더를 라이브러리 패키지에 포함해야 합니다.
 
-**Note II:** We tried to write our code clean, portable and platform neutral,
-so it should be possible to compile it on a wide range of platforms and also
-with other compilers than gcc or clang. We use [Travis CI](https://travis-ci.org/)
-to test commits and pull requests in our repository, but unfortunately it's not
-always possible to test the code in very exotic setups. However, feel free to
-report issues to our bug tracker on GitHub or to supertux-devel@lists.lethargik.org.
+**알림 II:** 우리는 코드를 깔끔하고, 휴대성이 좋고, 플랫폼 중립적으로 쓰려고 노력했습니다. 그래서 다양한 플랫폼에서
+그리고 gcc나 clang이 아닌 다른 컴파일러에서도 컴파일이 가능해야 했습니다. 우리는 [Travis CI](https://travis-ci.org/)
+를 사용하여 저장소에서 커밋을 테스트하고 요청을 꺼내는 데 사용하지만, 유감스럽게도 이국적인 설정에서 코드를 항상
+테스트하는 것은 불가능합니다. 그러나 GitHub의 버그 트래커나 supertux-devel@lists에 문제를 보고해 주십시오.
+lethargik.org에서 확인하실 수 있습니다.
 
-**Note III (regarding glbinding):** To use glbinding instead of GLEW, call `cmake`
-with the flag -DGLBINDING_ENABLED=ON
+**알림 III (glbinding에 관하여):** GLEW 대신 glbinding을 사용하려면 -DGLBINDING_ENABLEED=ON 플래그가 있는 'cmake'를 호출합니다.
 
-Installing under Linux/UNIX using CMake
+CMake를 사용하여 Linux/UNIX에 설치합니다.
 ---------------------------------------
 
-SuperTux uses CMake to generate a set of Makefiles for the build
-process. To generate these Makefiles and build SuperTux, perform the
-following steps:
+SuperTux는 CMake를 사용하여 빌드 프로세스를 위한 Makefiles 집합을 생성합니다.
+Makefiles를 생성하고 SuperTux를 빌드하려면 다음 단계를 수행합니다.
 
-1. `cd` to the directory where you unpacked the SuperTux source
-   archive, i.e. to the directory containing `src` and `data`.
+1. "cd"는 SuperTux 소스 아카이브의 압축을 푼 디렉토리,
+   즉 src와 data가 들어 있는 디렉토리에 있습니다.
+   
+2. git를 사용하여 이 Supertux repo를 복제한 경우 "git 하위 모듈 업데이트
+   --init --recursive"를 실행하여 다람쥐, tinygettext, physf 및 일부 다른 모듈을 가져오거나 업데이트합니다.
+   (타볼(.tar)에서 이 버전의 Supertux를 구했다면, squirrel와 tinygettext는 이미 타볼에 있습니다.)
 
-2. If you cloned this Supertux repo using git run `git submodule
-   update --init --recursive` to fetch/update squirrel, tinygettext,
-   physfs, and some other modules.
-   (If you got this version of Supertux from a tarball (.tar), squirrel
-   and tinygettext are already in the tarball.)
+3. mkdir 빌드, cd 빌드를 실행하여 비어 있는 새 빌드 디렉토리로 만들고 변경합니다.
 
-3. Create and change to a new, empty build directory by running `mkdir
-   build`, `cd build`.
+4. 'cmake..'를 실행하세요.표준 옵션으로 SuperTux를 구축하는 데 필요한 Makefiles를 만듭니다.
+    SuperTux를 구축하는 데 필요한 라이브러리가 없는 경우 해당 라이브러리를 먼저 설치한 다음 CMake를 다시 실행합니다.
+    표준 옵션으로 변경하는 방법은 아래를 참조하세요.
 
-4. Run `cmake ..` to create the Makefiles needed to build SuperTux
-   with standard options. If you are missing any libraries needed to
-   build SuperTux, install those first, then try running CMake again.
-   See below for instructions on how to change to standard options.
+5. 빌드 프로세스를 시작하려면 "make"를 입력합니다.
 
-5. Type `make` to start the build process.
+6. 프로그램 및 데이터 파일 및 문서를 설치하려면 '설치'를 입력합니다. Linux 시스템의 루트 사용자여야 합니다.
+   su 명령을 사용하거나 sudo make install을 사용하여 루트 사용자가 될 수 있습니다.) 제거 대상이 없으므로 패키지
+   또는 기타 시스템별 설치를 대신 작성할 수 있습니다.
 
-6. Type `make install` to install the programs and any data files and
-   documentation. (You should be a root user on Linux systems. You can
-   become a root user with the `su` command or by using `sudo make
-   install`) Note that there is no uninstall target, so you might wish
-   to create a package or other system-specific installation instead.
+7. 이제 게임이 작동하고 원본 디렉터리를 제거할 수 있습니다.
 
-7. The game should work now and you can remove the source directory.
+CMake에 대한 추가 옵션을 설정하여 빌드 프로세스를 사용자 정의할 수 있습니다. 이를 위한 가장 쉬운 방법은
+실행 'cmake..'를 사용하는 것입니다.'cmake..' 대신에 말이죠.는 CMake의 저주 기반 사용자 인터페이스를 불러옵니다.
+화살표 키를 사용하여 옵션을 선택하고 Enter 키를 눌러 선택한 옵션을 변경한 다음 c를 눌러(필요한 경우 반복적으로)
+'c'를 눌러 변경 내용을 적용하고 새로 설정된 옵션으로 인한 새 옵션을 표시합니다. 완료되면 'g' 키를 눌러
+새 Makefiles 집합을 생성하고 종료합니다.
 
-You can customize the build process by setting additional options for
-CMake. The easiest way to do this is to use run `ccmake ..` instead of
-`cmake ..` to bring up the curses-based user interface of CMake.
-Select an option using the arrow keys, change the selected option by
-pressing the Enter key, then hit the `c` (repeatedly, if necessary) to
-apply your changes and bring up new options resulting from your newly
-set ones. When you are done, press the `g` key to generate a new set
-of Makefiles and exit.
-
-Alternatively, you can pass options to `cmake ..` via the command
-line. Some common command line switches are:
+또는 'cmake ..'에 옵션을 전달할 수 있습니다.명령줄을 통해 실행합니다. 일부 공통 명령줄 스위치는 다음과 같습니다:
 
 `-DCMAKE_VERBOSE_MAKEFILE=ON`
-: Generates Makefiles that print all commands prior to executing them.
+: 명령을 실행하기 전에 모든 명령을 인쇄하는 Makefiles를 생성합니다.
 
 `-Dxxx_LIBRARY=/path/to/library.so -Dxxx_INCLUDE_DIR=/path/to/headerfiles`
-: Manually specify the installation directory of a library.
+: 라이브러리의 설치 디렉터리를 수동으로 지정합니다.
 
 `-DCMAKE_BUILD_TYPE=DEBUG`
-: Enables debug mode and compiles extra debug symbols into the SuperTux
-executable. This is useful when sending in bug reports to the
-developers.
+: 디버그 모드를 활성화하고 추가 디버그 기호를 SuperTux 실행 파일에 컴파일합니다.
+  이것은 버그 보고서를 개발자에게 보낼 때 유용합니다.
 
 `-DCMAKE_BUILD_TYPE=RELEASE`
-: Enables release mode and compiles some sanity checks out of the build.
+: 릴리스 모드를 활성화하고 빌드에서 일부 온전성 검사를 컴파일합니다.
 
 
-### Notes for GIT users
+### GIT users 사용자를 위한 알림
 
-SuperTux does not need to be installed on the system;
-you can run it from its own directory.
+시스템에 SuperTux를 설치할 필요가 없습니다.
+자신의 디렉토리에서 실행할 수 있습니다.
 
-If `ccache` is installed and working,
-it can help to signigicantly reduce the (re)compilation time,
-e.g. when doing a git bisect with many checkouts.
-Furthermore, it is possible to reduce the optimization level to O1,
-which may reduce compilation times:
+'ccache'가 설치되어 작동하면 컴파일 시간을 상당히 단축할 수 있습니다.
+예를 들어 체크아웃이 많은 Git 이등분할 때 사용합니다.
+또한 최적화 수준을 O1로 줄일 수 있으므로 컴파일 시간이 단축될 수 있습니다.:
 ```
 cmake .. -DWARNINGS=ON -DCMAKE_CXX_FLAGS="-O1"
 ```
 
-A general way to reduce compilation time is running `make` with multiple
-threads:
+컴파일 시간을 줄이는 일반적인 방법은 여러 개의 스레드로 make를 실행하는 것입니다.:
 ```
 make -j $(nproc || sysctl -n hw.ncpu || echo 2)
 ```
 
 
-Installing under Windows using CMake and Visual Studio
+CMake 및 Visual Studio를 사용하여 Windows에서 설치합니다.
 ------------------------------------------------------
-To build SuperTux on Windows with Visual Studio you need to have CMake and a
-recent version of Visual Studio installed. Visual Studio 2015 Community Edition
-is known to work fine.
+Visual Studio를 사용하여 Windows에서 SuperTux를 구축하려면 CMake와 최신 버전의 Visual Studio가 설치되어
+있어야 합니다. Visual Studio 2015 Community Edition은 잘 작동하는 것으로 알려져 있습니다.
 
-Because it's difficult to build and download all the dependencies per hand on windows,
-SuperTux provides a [dependency package](https://download.supertux.org/builddep/)
-that should contain all headers and libraries needed to build SuperTux on Windows.
+SuperTux는 Windows에넘길 때 마다 모든 종속성을 빌드하고 다운로드하는 것이 어렵기 때문에
+[superPackage](https://download.supertux.org/builddep/)that에는 Windows에서 SuperTux를
+빌드하는 데 필요한 모든 헤더와 라이브러리가 포함되어 있어야 합니다.
 
-1. Unpack the SuperTux source pack or get the source with git (`git clone --recursive https://github.com/SuperTux/supertux.git`).
+1. SuperTux 소스 팩을 풀거나 git("git clone --recursive https://github.com/SuperTux/supertux.git")로 소스를 가져옵니다.
 
-2. Extract the [dependency package](https://download.supertux.org/builddep/)
-into the source directory, so the `dependencies` folder is besides the `src` folder.
+2. source directory에 [package](https://download.supertux.org/builddep/))의 압축을 풀어서 src 폴더 외에
+   'proc' 폴더가 있도록 합니다.
 
-3. Create a new, empty `build` folder.
+3. 비어 있는 새 '빌드' 폴더를 만듭니다.
 
-4. Open a console window and navigate to the `build` directory.
+4. 콘솔 창을 열고 '빌드' 디렉토리로 이동합니다.
 
-5. Run `cmake ..` to create the VS solution that builds SuperTux with standard options.
-For more CMake options, look at end of the Linux/UNIX build section.
+5. '카메크'를 실행하세요.표준 옵션으로 SuperTux를 구축하는 VS 솔루션을 만듭니다.
+더 많은 CMake 옵션을 보려면 Linux/UNIX 빌드 섹션의 끝을 확인합니다.
 
-5. Open the new Visual Studio solution `SUPERTUX.sln` in the `build` directory.
+5. 빌드 디렉토리에서 새로운 Visual Studio 솔루션 SUPERTUX.sln을 엽니다.
 
-6. Build the project.
+6. 프로젝트 빌드.
 
-7. Now you can run SuperTux using the run_supertux.bat file
+7. 이제 run_supertux.bat 파일을 사용하여 SuperTux를 실행할 수 있습니다.
